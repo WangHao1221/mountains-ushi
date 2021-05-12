@@ -21,7 +21,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -37,8 +37,8 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wxa804d985759e8489",
-  "projectname": "miniprogram-1",
+  "appid": "wxbea283f05d5073ad",
+  "projectname": "moutain-shousi",
   "libVersion": "2.14.1",
   "condition": {
     "search": {

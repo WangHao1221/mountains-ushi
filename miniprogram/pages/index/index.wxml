@@ -1,1 +1,50 @@
-<view>擦三</view>
+<view class="containner">
+  <swiper indicator-dots="true" interval="1000" duration="500" class="banner_swiper">
+    <block wx:for="{{bannnerList}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+  </swiper>
+  <view class="bell_wrapper">
+    <view class="bell_item bell_item_left">
+      <view>马上点餐</view>
+      <image src="../../img/bell_selected.png"></image>
+    </view>
+    <view class="bell_item">
+      <view>取餐の码</view>
+      <image src="../../img/qrcode_selected.png"></image>
+    </view>
+  </view>
+  <view class="vip_wrapper">
+    <view class="nav_title">免费入会</view>
+    <view class="vip_content">
+      <image class="vip_icon" src="../../img/vip_selected.png"></image>
+      <view class="vip_content_first">
+        <text>首次消费现金券</text>
+        <text class="preferential">8折</text>
+      </view>
+      <button class="vip_btn" type="primary">免费加入会员</button>
+    </view>
+  </view>
+  <view class="coupon_wrapper">
+    <view class="nav_title">我的卡券</view>
+    <view class="coupon_content">
+      <swiper interval="1000" duration="500">
+        <block wx:for="{{couponList}}" wx:key="id">
+            <swiper-item>
+              <view class="shanpin_title">
+                <view>SHANPINSUSHI</view>
+                <text class="logo_title">山品寿司</text>
+              </view>
+              <view class="qr_code">
+                <image src="{{item.src}}"></image>
+                <image class="coupon_white" src="../../img/coupon_white.png"></image>
+              </view>
+              <text class="des">{{item.des}}</text>
+            </swiper-item>
+          </block>
+      </swiper>
+    </view>
+  </view>
+</view>

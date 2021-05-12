@@ -1,0 +1,113 @@
+.containner{
+  padding: 10rpx;
+}
+.banner_swiper{
+  height: 400rpx;
+}
+.banner_swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+.bell_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 20rpx 0;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  top: -30rpx;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+}
+.bell_wrapper .bell_item{
+  flex: 1;
+  text-align: center;
+}
+.bell_wrapper .bell_item_left{
+  border-right: 1px solid #d1d1d1;
+}
+.bell_item image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.nav_title{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20rpx 0;
+}
+.vip_content{
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40rpx 10rpx;
+}
+.vip_icon{
+  width: 130rpx;
+  height: 130rpx;
+}
+.vip_content_first{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9001b;
+  border-radius: 10rpx;
+  color: #393939;
+  text-align: center;
+  padding: 10rpx;
+}
+.vip_content_first .preferential{
+  color: #d9001b;
+  font-weight: 500;
+}
+.vip_content .vip_btn{
+  width: auto;
+  font-weight: 400;
+  padding: 8px;
+  background-color: #d9001b;
+  color: #ffffff;
+  margin: 0;
+  border-radius: 10rpx;
+}
+.coupon_content{
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  padding: 40rpx 10rpx;
+}
+.coupon_content swiper{
+  height: 450rpx;
+  padding: 0 20rpx;
+}
+.coupon_content swiper swiper-item{
+  background-color: #d9001b;
+  padding: 20rpx;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.coupon_content swiper swiper-item .shanpin_title{
+  text-align: right;
+}
+.coupon_content swiper swiper-item .shanpin_title .logo_title{
+  letter-spacing: 25rpx;
+  font-family: cursive;
+}
+.coupon_content swiper swiper-item .qr_code{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.coupon_content swiper image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.coupon_content swiper image.coupon_white{
+  width: 100rpx;
+  height: 100rpx;
+}
+.coupon_content swiper swiper-item .des{
+  font-size: 26rpx
+}
