@@ -1,2 +1,46 @@
 <!--pages/shanpin/shanpin.wxml-->
-<text>pages/shanpin/shanpin.wxml</text>
+<view class="page__bd">
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+</view>
+<view class="container">
+ <!-- 左侧栏 -->
+ <scroll-view class="nav_left" scroll-y="true" scroll-with-animation="true" enable-back-to-top="true">
+    <block wx:for="{{tabs}}" wx:key="id">
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="nav_left_items {{indexId == index ? 'active' : ''}}" bindtap="switchRightTab" data-menuindex='{{index}}' data-anchor='{{item.anchor}}'>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- 右侧栏 -->
+  <view class="nav_right">
+    <!-- 当前分类有数据则展示 -->
+    <scroll-view scroll-y="true" scroll-with-animation="true" enable-back-to-top="true" class="scroll_content" bindscroll="scrollToLeft" scroll-into-view="{{toTitle}}">
+      <block wx:for="{{tabs}}" wx:key="tabs">
+        <view id="view-{{item.anchor}}">
+          <view class="title" id="title-{{item.anchor}}">{{item.title}}</view>
+          <block wx:for="{{classificationArray[item.anchor]}}" wx:key="id">
+            <view class="nav_right_items" data-item="{{item}}">
+              <view class='position_hasshop_img'>
+                <!-- 商品图片 -->
+                <image class='shop_img' src='{{item.imgGood}}'></image>
+              </view>
+              <view class='menu_right_txt'>
+                <!-- 商品名称和描述 -->
+                <view class='menu_right_name'>{{item.nameGood}}</view>
+                <view class='menu_right_down'>
+                  <!-- 商品最新价格 -->
+                  <view class="menu_right_nprice">
+                    ¥<text class='menu_right_nprice_text'>{{item.npriceGood}}</text>
+                  </view>
+                  <!-- 加入购物车 -->
+                  <image class='btn_addCart' src='../../img/addCart.png' catchtap='addCart' data-item='{{item}}'></image>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
